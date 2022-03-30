@@ -12,15 +12,15 @@ function App() {
   return (
     <AuthProvider>
       <Container className="d-flex align-items-center justify-content-center"
-      style={{ minHeight: "100vh "}}>
-        <div className="w-100" style= {{maxWidth: '400px'}}>
-            <AuthProvider>
-              <Routes>
-                <Route exact path="/" element={<Dashboard />} />
-                <Route path="/signup" element={<Signup />} />
-                <Route path="/login" element={<Login />} />
-              </Routes>
-            </AuthProvider>
+        style={{ minHeight: "100vh " }}>
+        <div className="w-100" style={{ maxWidth: '400px' }}>
+          <AuthProvider>
+            <Routes>
+              <Route path="/" element={<PrivateRoute component={Dashboard} />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/login" element={<Login />} />
+            </Routes>
+          </AuthProvider>
         </div>
       </Container>
     </AuthProvider>
