@@ -6,7 +6,8 @@ import Dashboard from './Dashboard';
 import Login from './Login';
 import PrivateRoute from './PrivateRoute';
 import { AuthProvider } from '../contexts/AuthContext';
-import Header from '../components/Header';
+
+
 
 function App() {
   return (

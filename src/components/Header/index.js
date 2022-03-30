@@ -1,4 +1,5 @@
 import React from 'react';
+import Nav from '../../components/Nav';
 
 function Header(props) {
   return (
@@ -9,6 +10,7 @@ function Header(props) {
       <h1 className="px-3 m-3">Sample business</h1>
       {props.children}
     </header>
+
   );
 }
 

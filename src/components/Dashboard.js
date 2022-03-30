@@ -3,11 +3,13 @@ import { Card, Button, Alert } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import Header from '../components/Header';
+import Nav from '../components/Nav';
 
 export default function Dashboard() {
   const [error, setError] = useState('');
   const { currentUser, logout } = useAuth();
   const navigate = useNavigate();
+  const [currentPage, setCurrentPage] = useState('/')
 
   async function handleLogout() {
     setError('');
@@ -21,7 +23,9 @@ export default function Dashboard() {
   }
   return (
     <>
-      <Header></Header>
+      <Header>
+        <Nav setCurrentPage={setCurrentPage}></Nav>
+      </Header>
       <Card>
         <Card.Body>
           <h2 className="text-center mb-4">Profile</h2>
