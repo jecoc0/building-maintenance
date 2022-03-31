@@ -5,9 +5,6 @@ import Page from './Page';
 import Footer from './Footer';
 
 export default function Dashboard() {
-  const [error, setError] = useState('');
-  const { currentUser, logout } = useAuth();
-  const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState('/');
 
   return (
