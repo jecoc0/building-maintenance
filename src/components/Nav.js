@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
 
 function Nav(props) {
+  const [error, setError] = useState('');
+  const { currentUser, logout } = useAuth();
+  const navigate = useNavigate();
   const { setCurrentPage } = props;
+
+  async function handleLogout() {
+    setError('');
+
+    try {
+      await logout();
+      navigate('/login');
+    } catch {
+      setError('Failed to log out');
+    }
+  }
 
   return (
     <nav>
@@ -25,7 +41,7 @@ function Nav(props) {
           </span>
         </li>
         <li className="nav-item p-2" key="logout">
-          <span className="nav-link" onClick={() => setCurrentPage('logout')}>
+          <span className="nav-link" onClick={handleLogout}>
             Logout
           </span>
         </li>
