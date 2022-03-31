@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 
 const facilitySchema = new Schema(
     {
-        name: {
+        facilityName: {
             type: String,
             required: 'Name is required',
             minlength: 1,

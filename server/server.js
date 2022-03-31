@@ -16,11 +16,11 @@ const startServer = async () => {
 
     await server.start();
 
-    server.applyMiddlewear({
+    server.applyMiddleware({
         app
     });
 
-    console.log(`use graghql at http://localhost:${PORT}${server.graghqlPath}`);
+    console.log(`use graghql at http://localhost:${PORT}${server.graphqlPath}`);
 };
 
 startServer();
@@ -28,7 +28,7 @@ startServer();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-db.once('open', () =>{
+db.once('open', () => {
     app.listen(PORT, () => {
         console.log(`app server running on port${PORT}`)
     })
