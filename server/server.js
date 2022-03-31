@@ -12,4 +12,24 @@ const startServer = async () => {
         resolvers
 
     })
+
+
+    await server.start();
+
+    server.applyMiddlewear({
+        app
+    });
+
+    console.log(`use graghql at http://localhost:${PORT}${server.graghqlPath}`);
 };
+
+startServer();
+
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
+db.once('open', () =>{
+    app.listen(PORT, () => {
+        console.log(`app server running on port${PORT}`)
+    })
+})
