@@ -24,5 +24,3 @@ export default function Profile() {
     </Card>
   );
 }
-
-export default Profile;
