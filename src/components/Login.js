@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import { Button, Card, Form, Alert } from 'react-bootstrap'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
@@ -12,19 +12,30 @@ export default function Login() {
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
 
+  let mounted
   async function handleSubmit(e) {
+    mounted = true
     e.preventDefault()
-    
-      try {
+
+    try {
+      if (mounted) {
         setError('')
         setLoading(true)
         await login(emailRef.current.value, passwordRef.current.value)
         navigate('/')
-      } catch {
-        setError('Failed to log in')
       }
-      setLoading(false)
-      }
+    } catch {
+      setError('Failed to log in')
+    }
+    setLoading(false)
+  }
+
+  useEffect(() => {
+    return () => {
+      // this is needed to fix a memory leak issue. We need to clean up the component because there is an async function being called.
+      mounted = false
+    }
+  }, [])
 
 
   return (
@@ -46,12 +57,15 @@ export default function Login() {
 
             <Button disabled={loading} type="submit" className="w-100 btn-danger" >Log In</Button>
           </Form>
+          <div className="w-100 text-center mt-2">
+            <Link to="/forgot-password">Forgot Password?</Link>
+          </div>
         </Card.Body>
       </Card>
-        <div className="w-100 text-center mt-2">
-          Need an account? <Link to="/signup">Sign Up</Link> 
-        </div>
-      
+      <div className="w-100 text-center mt-2">
+        Need an account? <Link to="/signup">Sign Up</Link>
+      </div>
+
     </>
   )
 }
