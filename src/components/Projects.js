@@ -1,4 +1,16 @@
 import React from 'react';
+{
+  // const uploadBtn = document.querySelector('#btn_upload');
+  // const finishBtn = document.querySelector('#finishBtn');
+  // const fileInput = document.querySelector('#file');
+  // const buildingInput = document.querySelector('#inputBuilding');
+  // const addressInput = document.querySelector('#inputAddress');
+  // const addressInput2 = document.querySelector('#inputAddress2');
+  // const cityInput = document.querySelector('#inputCity');
+  // const stateInput = document.querySelector('#inputState');
+  // const zipInput = document.querySelector('#inputZip');
+  // const toDoInput = document.querySelector('#inputToDo');
+}
 
 function Projects() {
   const [image, setImage] = React.useState('');
@@ -9,18 +21,7 @@ function Projects() {
   const [state, setState] = React.useState('');
   const [zip, setZip] = React.useState('');
   const [todo, setToDo] = React.useState('');
-  {
-    // const uploadBtn = document.querySelector('#btn_upload');
-    // const finishBtn = document.querySelector('#finishBtn');
-    // const fileInput = document.querySelector('#file');
-    // const buildingInput = document.querySelector('#inputBuilding');
-    // const addressInput = document.querySelector('#inputAddress');
-    // const addressInput2 = document.querySelector('#inputAddress2');
-    // const cityInput = document.querySelector('#inputCity');
-    // const stateInput = document.querySelector('#inputState');
-    // const zipInput = document.querySelector('#inputZip');
-    // const toDoInput = document.querySelector('#inputToDo');
-  }
+
 
   let project = {};
 
