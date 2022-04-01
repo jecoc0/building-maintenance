@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Navigation from './Nav';
+import Footer from './Footer';
 import {
   Button,
   Modal,
@@ -40,6 +42,7 @@ function Projects() {
 
   return (
     <>
+      <Navigation></Navigation>
       <Container className="my-3">
         <Button className="btn-danger btn-lg" onClick={handleShow}>
           Add A Project
@@ -416,6 +419,7 @@ function Projects() {
           </Card>
         </Row>
       </Container>
+      <Footer></Footer>
     </>
   );
 }

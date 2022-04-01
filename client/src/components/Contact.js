@@ -1,9 +1,15 @@
-import React from 'react'
+import React from 'react';
+import Navigation from './Nav';
+import Footer from './Footer';
 
 const Contact = () => {
   return (
-    <div>Contact</div>
-  )
-}
+    <>
+      <Navigation></Navigation>
+      <div>Contact</div>
+      <Footer></Footer>
+    </>
+  );
+};
 
-export default Contact
+export default Contact;
