@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Overview() {
   return (
@@ -49,9 +50,9 @@ function Overview() {
               <li className="list-group-item">Landscaping</li>
             </ul>
             <div className="card-footer text-center">
-              <a href="#" className="card-link">
+              <Link to="/projects" className="card-link">
                 See Full Job Description
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -77,9 +78,9 @@ function Overview() {
               <li className="list-group-item">Landscaping</li>
             </ul>
             <div className="card-footer text-center">
-              <a href="#" className="card-link">
+              <Link to="/projects" className="card-link">
                 See Full Job Description
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -105,9 +106,9 @@ function Overview() {
               <li className="list-group-item">Landscaping</li>
             </ul>
             <div className="card-footer text-center">
-              <a href="#" className="card-link">
+              <Link to="/projects" className="card-link">
                 See Full Job Description
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -133,9 +134,9 @@ function Overview() {
               <li className="list-group-item">Landscaping</li>
             </ul>
             <div className="card-footer text-center">
-              <a href="#" className="card-link">
+              <Link to="/projects" className="card-link">
                 See Full Job Description
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -161,9 +162,9 @@ function Overview() {
               <li className="list-group-item">Landscaping</li>
             </ul>
             <div className="card-footer text-center">
-              <a href="#" className="card-link">
+              <Link to="/projects" className="card-link">
                 See Full Job Description
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -189,9 +190,9 @@ function Overview() {
               <li className="list-group-item">Landscaping</li>
             </ul>
             <div className="card-footer text-center">
-              <a href="#" className="card-link">
+              <Link to="/projects" className="card-link">
                 See Full Job Description
-              </a>
+              </Link>
             </div>
           </div>
         </div>

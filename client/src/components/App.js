@@ -1,29 +1,36 @@
-import React, { Component } from 'react'
-import { Routes, Route, PrivateRoute } from 'react-router-dom'
-import { Container } from 'react-bootstrap'
-import Signup from './Signup'
-import Dashboard from './Dashboard'
-import Login from './Login'
-import { AuthProvider } from "../contexts/AuthContext";
-
+import React, { Component } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
+import Signup from './Signup';
+import Dashboard from './Dashboard';
+import Login from './Login';
+import PrivateRoute from './PrivateRoute';
+import ForgotPassword from './ForgotPassword';
+import { AuthProvider } from '../contexts/AuthContext';
+import Overview from './Overview';
+import Projects from './Projects';
+import Contact from './Contact';
 
 function App() {
   return (
     <AuthProvider>
-      <Container className="d-flex align-items-center justify-content-center"
-      style={{ minHeight: "100vh "}}>
-        <div className="w-100" style= {{maxWidth: '400px'}}>
-            <AuthProvider>
-              <Routes>
-                <Route exact path="/" element={<Dashboard />} />
-                <Route path="/signup" element={<Signup />} />
-                <Route path="/login" element={<Login />} />
-              </Routes>
-            </AuthProvider>
-        </div>
-      </Container>
+      <Routes>
+        <Route path="/" element={<PrivateRoute component={Dashboard} />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route
+          path="/overview"
+          element={<PrivateRoute component={Overview} />}
+        />
+        <Route
+          path="/projects"
+          element={<PrivateRoute component={Projects} />}
+        />
+        <Route path="/contact" element={<PrivateRoute component={Contact} />} />
+      </Routes>
     </AuthProvider>
-  )
+  );
 }
 
-export default App
+export default App;
