@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
 import Signup from './Signup';
 import Dashboard from './Dashboard';
 import Login from './Login';
