@@ -14,7 +14,7 @@ function Overview() {
   console.log(facilities);
 
   if (!facilities.length) {
-    return <h3>No Thoughts Yet</h3>;
+    return <h3>Loading</h3>;
   }
   return (
     <>
