@@ -7,6 +7,18 @@ const facilitySchema = new Schema(
             required: 'Name is required',
             minlength: 1,
             maxlength: 500
+        },
+        address: {
+            type: String,
+            required: 'Address is required',
+            minlength: 1,
+            maxlength: 500
+        },
+        photoName: {
+            type: String,
+            required: 'Photo name is required',
+            minlength: 1,
+            maxlength: 500
         }
     }
 );

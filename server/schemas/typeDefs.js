@@ -5,6 +5,8 @@ const typeDefs = gql`
     type Facility {
         _id: ID
         facilityName: String
+        address: String
+        photoName: String
     }
 
     type Query {
