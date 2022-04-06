@@ -35,6 +35,9 @@ function Navigation() {
             <Nav.Item className="px-2">
               <Link to="/contact">Contacts</Link>
             </Nav.Item>
+            <Nav.Item className="px-2">
+              <Link to="/login">Logout</Link>
+            </Nav.Item>
           </Nav>
           <Nav>
             <Nav.Link href="tel:555-555-5555">555-555-5555</Nav.Link>
