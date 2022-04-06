@@ -23,13 +23,19 @@ const startServer = async () => {
     console.log(`use graghql at http://localhost:${PORT}${server.graphqlPath}`);
 };
 
-startServer();
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
+// All other GET requests not handled before will return our React app
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+});
 
 db.once('open', () => {
     app.listen(PORT, () => {
         console.log(`app server running on port${PORT}`)
     })
 })
+
+startServer();
