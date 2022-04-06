@@ -7,6 +7,7 @@ const typeDefs = gql`
         facilityName: String
         address: String
         photoName: String
+        issues: [String]
     }
 
     type Query {
@@ -15,6 +16,7 @@ const typeDefs = gql`
 
     type Mutation {
         addFacility(facilityName: String) : Facility
+        addIssue(_id : ID, issueType: String) : Facility
     }
 `
 

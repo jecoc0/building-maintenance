@@ -20,28 +20,38 @@ function Navigation() {
   }
 
   return (
-    <Navbar collapseOnSelect expand="lg">
-      <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Item className="px-2">
-              <Link to="/overview">Overview</Link>
-            </Nav.Item>
-            <Nav.Item className="px-2">
-              <Link to="/projects">Projects</Link>
-            </Nav.Item>
-            <Nav.Item className="px-2">
-              <Link to="/contact">Contacts</Link>
-            </Nav.Item>
-          </Nav>
-          <Nav>
-            <Nav.Link href="tel:555-555-5555">555-555-5555</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+
+    <div className="nav-style">
+      <Navbar collapseOnSelect expand="lg">
+        <Container>
+
+          <Navbar.Brand href="#home" className="FM-style">Facilities Maintenance</Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+
+            
+              <img src="../../assets/logoSF.png" className="sflogo" />
+            
+
+            
+              <Nav className="nav-contact">
+                <Nav.Item className="px-2">
+                  <Link to="/overview">Overview</Link>
+                </Nav.Item>
+                <Nav.Item className="px-2">
+                  <Link to="/projects">Projects</Link>
+                </Nav.Item>
+                <Nav.Item className="px-2">
+                  <Link to="/contact">Contacts</Link>
+                </Nav.Item>
+              </Nav>
+              
+            
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </div>
+
   );
 }
 
