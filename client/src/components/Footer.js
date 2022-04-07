@@ -2,13 +2,16 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer className="text-center d-flex justify-content-center mt-auto">
+    <footer
+      id="footer"
+      className="text-center d-flex justify-content-center mt-auto"
+    >
       <section className="container row mt-3">
         <div className="container text-center col mx-2">
-          <h3>Company Name</h3>
+          <h3>Facilities Maintenance</h3>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi
-            laboriosam ad, est provident vitae explicabo.
+            If this issue needs immediate attention please call or text Cody
+            Hanks 801-123-4567
           </p>
         </div>
         <div className="container text-center col mx-2">
