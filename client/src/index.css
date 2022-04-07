@@ -22,9 +22,11 @@ code {
 }
 
 a {
+  padding-left: 40px;
   text-decoration: none !important;
   color: #dd1f28 !important;
 }
+
 
 .nav-style {
   display: flex;
@@ -49,6 +51,8 @@ a {
 }
 
 .FM-style {
+  padding-right: 100px;
+  margin-left: 70px;
   display: flex;
   align-self: center;
   font-size: larger;
@@ -98,4 +102,23 @@ a {
   right: 0;
   bottom: 0;
   height: 60px;
+}
+
+.modal-style {
+display: flex;
+flex-direction: column;
+align-items: center;
+
+
+}
+
+.facilityName-modal {
+  color: #dd1f28;
+  font-size: xx-large;
+}
+
+.modal-button {
+  background-color: rgb(204, 202, 202);
+  margin-left: 20px;
+  margin-right: 20px;
 }
