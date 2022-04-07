@@ -1,4 +1,5 @@
 import React from 'react';
+import "../index.css"
 import { Routes, Route } from 'react-router-dom';
 import Signup from './Signup';
 import Dashboard from './Dashboard';
@@ -9,15 +10,28 @@ import { AuthProvider } from '../contexts/AuthContext';
 import Overview from './Overview';
 import Projects from './Projects';
 import Contact from './Contact';
-
+import { onError } from 'apollo-link-error';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
+import { getQueryDefinition } from '@apollo/client/utilities';
+
+const errorLink = onError(({ graphQLErrors, networkError }) => {
+  console.log("In error link");
+  if (graphQLErrors) {
+    console.log('graphQLErrors', graphQLErrors);
+  }
+  if (networkError) {
+    console.log('networkError', networkError);
+  }
+});
+
+
 
 const httpLink = createHttpLink({
-  uri: 'http://localhost:3001/graphql',
+  uri: '/graphql',
 });
 
 const client = new ApolloClient({
-  link: httpLink,
+  link: errorLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
 

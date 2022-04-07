@@ -19,6 +19,9 @@ const facilitySchema = new Schema(
             required: 'Photo name is required',
             minlength: 1,
             maxlength: 500
+        },
+        issues: {
+            type: Array,            
         }
     }
 );
