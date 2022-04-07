@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 
@@ -20,41 +20,34 @@ function Navigation() {
   }
 
   return (
-
     <div className="nav-style">
       <Navbar collapseOnSelect expand="lg">
         <Container>
-
-          <Navbar.Brand href="#home" className="FM-style">Facilities Maintenance</Navbar.Brand>
+          <Navbar.Brand href="#home" className="FM-style">
+            Facilities Maintenance
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
+            <img src="../../assets/logoSF.png" className="sflogo" />
 
-            
-              <img src="../../assets/logoSF.png" className="sflogo" />
-            
-
-            
-              <Nav className="nav-contact">
-                <Nav.Item className="px-2">
-                  <Link to="/overview">Overview</Link>
-                </Nav.Item>
-                <Nav.Item className="px-2">
-                  <Link to="/projects">Projects</Link>
-                </Nav.Item>
-                <Nav.Item className="px-2">
-                  <Link to="/contact">Contacts</Link>
-                </Nav.Item>
-                <Nav.Item className="px-2">
-              <Link to="/login">Logout</Link>
-            </Nav.Item>
-              </Nav>
-              
-            
+            <Nav className="nav-contact">
+              <Nav.Item className="px-2">
+                <Link to="/overview">Overview</Link>
+              </Nav.Item>
+              <Nav.Item className="px-2">
+                <Link to="/projects">Projects</Link>
+              </Nav.Item>
+              <Nav.Item className="px-2">
+                <Link to="/contact">Contact</Link>
+              </Nav.Item>
+              <Nav.Item className="px-2">
+                <Button class="btn-danger" onClick={handleLogout}>Logout</Button>
+              </Nav.Item>
+            </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
     </div>
-
   );
 }
 
