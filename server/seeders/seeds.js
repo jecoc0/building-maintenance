@@ -24,7 +24,7 @@ db.once('open', async () => {
 
     facilityName = "Fairgrounds";
     address = "55656 Main Street"
-    photoName = "../../assets/fairgrounds.jpg"
+    photoName = "../../assets/Fairgrounds.jpg"
 
     createdFacility = await Facility.create({ facilityName, address, photoName })
 
@@ -36,7 +36,7 @@ db.once('open', async () => {
 
     facilityName = "Library";
     address = "9887 Main Street"
-    photoName = "../../assets/library.jpg"
+    photoName = "../../assets/Library.jpg"
 
     createdFacility = await Facility.create({ facilityName, address, photoName })
 
