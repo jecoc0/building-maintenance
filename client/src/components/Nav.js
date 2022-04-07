@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 
@@ -41,7 +41,7 @@ function Navigation() {
                 <Link to="/contact">Contact</Link>
               </Nav.Item>
               <Nav.Item className="px-2">
-                <button onClick={handleLogout}>Logout</button>
+                <Button class="btn-danger" onClick={handleLogout}>Logout</Button>
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>
