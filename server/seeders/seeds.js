@@ -9,7 +9,7 @@ db.once('open', async () => {
     await Facility.deleteMany({});
 
     let facilityName = "City Offices";
-    let address = "1234 Street";
+    let address = "40 S Main St, Spanish Fork";
     let photoName = "../../assets/city-office.jpg"
 
     console.log("Creating faciliy");
@@ -17,31 +17,31 @@ db.once('open', async () => {
     let createdFacility = await Facility.create({ facilityName, address, photoName })
 
     facilityName = "Senior Center";
-    address = "456 Main Street"
+    address = "167 W Center St, Spanish Fork"
     photoName = "../../assets/senior-center.jpg"
 
     createdFacility = await Facility.create({ facilityName, address, photoName })
 
     facilityName = "Fairgrounds";
-    address = "55656 Main Street"
+    address = "475 S Main St, Spanish Fork"
     photoName = "../../assets/Fairgrounds.jpg"
 
     createdFacility = await Facility.create({ facilityName, address, photoName })
 
     facilityName = "Justice Center";
-    address = "456 Main Street"
+    address = "775 W Center St, Spanish Fork"
     photoName = "../../assets/justice-center.jpg"
 
     createdFacility = await Facility.create({ facilityName, address, photoName })
 
     facilityName = "Library";
-    address = "9887 Main Street"
+    address = "49 S Main St, Spanish Fork"
     photoName = "../../assets/Library.jpg"
 
     createdFacility = await Facility.create({ facilityName, address, photoName })
 
     facilityName = "Fire Station";
-    address = "12356 Main Street"
+    address = "370 N Main St, Spanish Fork"
     photoName = "../../assets/Fire-Station.jpg"
 
     createdFacility = await Facility.create({ facilityName, address, photoName })
