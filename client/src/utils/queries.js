@@ -7,6 +7,7 @@ export const QUERY_FACILITIES = gql`
       facilityName
       address
       photoName
+      issues
     }
   }
 `;
