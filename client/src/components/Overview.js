@@ -29,8 +29,8 @@ function Overview() {
       left: '50%',
       right: '300px',
       bottom: '300px',
-      marginRight: '-50%',
       transform: 'translate(-50%, -50%)',
+      backgroundColor: 'rgba(158, 158, 158, 0.3)'
     },
   };
 
@@ -151,10 +151,10 @@ function Overview() {
                     contentLabel="Example Modal"
                     style={customStyles}
                   >
-                    <div>
-                      <p>{currentFacility?.facilityName}</p>
+                    <div className="modal-style">
+                      <p className="facilityName-modal">{currentFacility?.facilityName}</p>
                       <form onSubmit={handleFormSubmit}>
-                        <select
+                        <select  className="modal-button"
                           value={issueType}
                           onChange={(e) => setIssueType(e.target.value)}
                         >
@@ -162,7 +162,7 @@ function Overview() {
                           <option>Plumbing</option>
                           <option>Structural</option>
                         </select>
-                        <button>Submit Issue</button>
+                        <button className="modal-button">Submit Issue</button>
                       </form>
                     </div>
                   </Modal>
