@@ -29,8 +29,8 @@ function Footer() {
             <li>Bootstrap</li>
             <li>Node JS</li>
             <li>Express</li>
-            <li>MySql</li>
-            <li>Sequelize</li>
+            <li>MongoDB</li>
+            <li>Firebase</li>
           </ul>
         </div>
       </section>

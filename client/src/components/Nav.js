@@ -41,7 +41,7 @@ function Navigation() {
                 <Link to="/contact">Contact</Link>
               </Nav.Item>
               <Nav.Item className="px-2">
-                <Link to="/login">Logout</Link>
+                <button onClick={handleLogout}>Logout</button>
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>
