@@ -64,12 +64,18 @@ a {
   justify-content: center;
 }
 
+.card-subtitle {
+  color: #dd1f28 !important;
+  font-size: 1.25rem;
+}
+
 .list-group {
   border-top: none !important;
 }
 
 .list-group-item {
-  color: #9b9b9d !important;
+  color: #dd1f28 !important;
+  font-size: 1rem;
 }
 
 .btn-primary {

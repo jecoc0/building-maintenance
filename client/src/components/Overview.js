@@ -134,7 +134,9 @@ function Overview() {
                   <div className="card-body d-flex row">
                     <h5 className="card-title">{facility.facilityName}</h5>
 
-                    <a className="card-text card-title">{facility.address}</a>
+                    <div className="card-text card-title fac-address">
+                      {facility.address}
+                    </div>
                   </div>
                   <button
                     className="btn btn-primary mb-2"
@@ -165,7 +167,7 @@ function Overview() {
                     </div>
                   </Modal>
 
-                  <h6 className="card-subtitle my-2">Tasks To-Do</h6>
+                  <h6 className="card-subtitle my-2">Issues</h6>
                   <ul className="list-group list-group-flush">
                     {facility.issues &&
                       facility.issues.map((issue) => (
