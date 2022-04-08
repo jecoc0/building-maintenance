@@ -5,7 +5,7 @@ This is a facilities management app that allows users to track facility projects
 
 First the user signs up to create their own profile within the application.  Then they can navigate to Overview to see all existing projects and their issues, or navigate to the Projects tab to create a new project using the modal that pops up.  Finally, the user can contact the team with any questions about the facilities and maintenance requests by sending a message through the contact page.
 
-The website is styled with react-boostrap along with some custom CSS, especially used to integrate with the colors used by our customer.
+The website is styled with react-boostrap along with some custom CSS, especially used to integrate with the colors requested by our customer.
 
 ## Installation
 
